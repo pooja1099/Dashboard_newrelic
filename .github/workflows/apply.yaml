@@ -22,13 +22,11 @@ jobs:
           
       - name: terraform init
         run: |
-          cd module
+          cd..
           terraform init 
       - name: terraform plan
         run: |
-          cd module
+          cd..
           terraform plan
-      - name: terraform apply
-        run: |
-          cd module 
           terraform apply -auto-approve
+     
